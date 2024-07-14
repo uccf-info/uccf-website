@@ -10,6 +10,9 @@
             background-color: #f4f4f4;
             margin: 0;
             padding: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
         }
         header {
             background-color: #003366;
@@ -23,7 +26,6 @@
             top: 10px;
             right: 10px;
             width: 50px;
-            height: auto;
         }
         nav {
             display: flex;
@@ -40,6 +42,7 @@
             background-color: #003366;
         }
         .container {
+            flex: 1;
             padding: 20px;
             max-width: 1200px;
             margin: auto;
@@ -77,25 +80,24 @@
             color: white;
             text-align: center;
             padding: 10px 0;
-            position: fixed;
+            position: sticky;
             width: 100%;
             bottom: 0;
-        }
-        .form-container {
-            margin-bottom: 20px;
+            margin-top: auto;
         }
     </style>
 </head>
 <body>
     <header>
         <h1>Unidad de Combate Contra el Fraude (U.C.C.F.)</h1>
-        <img src="https://imgur.com/a/uccf-1pxrfZd" alt="Logo U.C.C.F.">
+        <img src="https://imgur.com/QlGrAUh" alt="U.C.C.F. Logo">
     </header>
     <nav>
         <a href="#about">Sobre Nosotros</a>
         <a href="#report">Reportar Fraude</a>
         <a href="#legal">Información Legal</a>
         <a href="#contact">Contacto</a>
+        <a href="#consultar">Consultar Expediente</a>
     </nav>
     <div class="container">
         <section id="about">
@@ -138,14 +140,14 @@
         </section>
         <section id="contact">
             <h2>Contacto</h2>
-            <p>Para consultas o información adicional, puede contactarnos a través del correo electrónico <a href="mailto:uccf.info.gub.uy@gmail.com">uccf.info.gub.uy@gmail.com</a> o llamando al +598 12345678.</p>
+            <p>Para consultas o información adicional, puede contactarnos a través del correo electrónico <a href="mailto:uccf.info.gub.uy@gmail.com">uccf.info.gub.uy@gmail.com</a>_</p>
         </section>
-        <section id="lookup">
+        <section id="consultar">
             <h2>Consultar Expediente</h2>
-            <form class="form-container" action="https://drive.google.com/file/d/1w6aUx16Wffjxfmv1VbF7QLW93bauUbqF/view?usp=sharing" method="GET" target="_blank">
+            <form action="https://drive.google.com/file/d/1w6aUx16Wffjxfmv1VbF7QLW93bauUbqF/view?usp=sharing" method="GET">
                 <div class="form-group">
-                    <label for="serial">Número de Expediente:</label>
-                    <input type="text" id="serial" name="serial" placeholder="UCCF-FT-1324-007" required>
+                    <label for="expediente">Número de Expediente:</label>
+                    <input type="text" id="expediente" name="expediente" required>
                 </div>
                 <div class="form-group">
                     <button type="submit">Consultar</button>
@@ -158,3 +160,4 @@
     </footer>
 </body>
 </html>
+
