@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unidad de Combate Contra el Fraude (U.C.C.F.)</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #003366;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #0059b3;
+        }
+        nav a {
+            color: white;
+            padding: 14px 20px;
+            text-decoration: none;
+            text-align: center;
+        }
+        nav a:hover {
+            background-color: #003366;
+        }
+        .container {
+            padding: 20px;
+            max-width: 1200px;
+            margin: auto;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        .form-group input, .form-group textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .form-group textarea {
+            resize: vertical;
+            height: 150px;
+        }
+        .form-group button {
+            background-color: #0059b3;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .form-group button:hover {
+            background-color: #003366;
+        }
+        footer {
+            background-color: #003366;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Unidad de Combate Contra el Fraude (U.C.C.F.)</h1>
+    </header>
+    <nav>
+        <a href="#about">Sobre Nosotros</a>
+        <a href="#report">Reportar Fraude</a>
+        <a href="#legal">Información Legal</a>
+        <a href="#contact">Contacto</a>
+    </nav>
+    <div class="container">
+        <section id="about">
+            <h2>Sobre Nosotros</h2>
+            <p>La Unidad de Combate Contra el Fraude (U.C.C.F.) se dedica a investigar, corroborar y determinar la veracidad de las denuncias recibidas por el organismo regulador de telecomunicaciones nacional. Nuestro objetivo es proteger a los ciudadanos de fraudes y estafas telefónicas.</p>
+        </section>
+        <section id="report">
+            <h2>Reportar Fraude</h2>
+            <form action="/report" method="POST">
+                <div class="form-group">
+                    <label for="name">Nombre Completo:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="phone">Número de Teléfono:</label>
+                    <input type="text" id="phone" name="phone" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Correo Electrónico:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Descripción del Fraude:</label>
+                    <textarea id="message" name="message" required></textarea>
+                </div>
+                <div class="form-group">
+                    <button type="submit">Enviar</button>
+                </div>
+            </form>
+        </section>
+        <section id="legal">
+            <h2>Información Legal</h2>
+            <p>Según el Código Penal, los delitos de fraude y estafa se castigan con severidad. Los artículos relevantes incluyen:</p>
+            <ul>
+                <li><strong>Artículo 347:</strong> Estafa - Castigo de seis meses a cuatro años de penitenciaría.</li>
+                <li><strong>Artículo 173:</strong> Define la estafa en general.</li>
+                <li><strong>Artículo 174:</strong> Establece circunstancias agravantes de la estafa.</li>
+            </ul>
+            <p>Para más detalles, por favor consulte el <a href="https://www.parlamento.gub.uy/codigo-penal" target="_blank">Código Penal</a>.</p>
+        </section>
+        <section id="contact">
+            <h2>Contacto</h2>
+            <p>Para consultas o información adicional, puede contactarnos a través del correo electrónico <a href="mailto:uccf.info.gub.uy@gmail.com">uccf.info.gub.uy@gmail.com</a> o llamando al +598 12345678.</p>
+        </section>
+    </div>
+    <footer>
+        <p>&copy; 2024 Unidad de Combate Contra el Fraude (U.C.C.F.). Todos los derechos reservados.</p>
+    </footer>
+</body>
+</html>
