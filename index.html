@@ -16,6 +16,14 @@
             color: white;
             padding: 20px 0;
             text-align: center;
+            position: relative;
+        }
+        header img {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            width: 50px;
+            height: auto;
         }
         nav {
             display: flex;
@@ -73,11 +81,15 @@
             width: 100%;
             bottom: 0;
         }
+        .form-container {
+            margin-bottom: 20px;
+        }
     </style>
 </head>
 <body>
     <header>
         <h1>Unidad de Combate Contra el Fraude (U.C.C.F.)</h1>
+        <img src="https://imgur.com/a/uccf-1pxrfZd" alt="Logo U.C.C.F.">
     </header>
     <nav>
         <a href="#about">Sobre Nosotros</a>
@@ -127,6 +139,18 @@
         <section id="contact">
             <h2>Contacto</h2>
             <p>Para consultas o información adicional, puede contactarnos a través del correo electrónico <a href="mailto:uccf.info.gub.uy@gmail.com">uccf.info.gub.uy@gmail.com</a> o llamando al +598 12345678.</p>
+        </section>
+        <section id="lookup">
+            <h2>Consultar Expediente</h2>
+            <form class="form-container" action="https://drive.google.com/file/d/1w6aUx16Wffjxfmv1VbF7QLW93bauUbqF/view?usp=sharing" method="GET" target="_blank">
+                <div class="form-group">
+                    <label for="serial">Número de Expediente:</label>
+                    <input type="text" id="serial" name="serial" placeholder="UCCF-FT-1324-007" required>
+                </div>
+                <div class="form-group">
+                    <button type="submit">Consultar</button>
+                </div>
+            </form>
         </section>
     </div>
     <footer>
