@@ -24,13 +24,14 @@
         header img {
             position: absolute;
             top: 20px;
-            right: 20px;
+            left: 20px;
             width: 100px;
         }
         nav {
             display: flex;
             justify-content: center;
             background-color: #0059b3;
+            flex-wrap: wrap;
         }
         nav a {
             color: white;
@@ -46,6 +47,8 @@
             padding: 20px;
             max-width: 1200px;
             margin: auto;
+            width: 100%;
+            box-sizing: border-box;
         }
         .form-group {
             margin-bottom: 15px;
@@ -59,6 +62,7 @@
             padding: 10px;
             border: 1px solid #ccc;
             border-radius: 5px;
+            box-sizing: border-box;
         }
         .form-group textarea {
             resize: vertical;
@@ -85,11 +89,24 @@
             bottom: 0;
             margin-top: auto;
         }
+        @media (max-width: 768px) {
+            header img {
+                width: 50px;
+                top: 10px;
+                left: 10px;
+            }
+            nav a {
+                flex: 1 1 100%;
+            }
+            .container {
+                padding: 10px;
+            }
+        }
     </style>
 </head>
 <body>
     <header>
-        <h1>Unidad de Combate Contra el Fraude (U.C.C.F.)</h1>
+        <h1>Unidad de Combate Contra el Fraude U.C.C.F.</h1>
         <img src="https://i.imgur.com/QlGrAUh.png" alt="U.C.C.F. Logo">
     </header>
     <nav>
@@ -98,6 +115,7 @@
         <a href="#legal">Información Legal</a>
         <a href="#contact">Contacto</a>
         <a href="#consultar">Consultar Expediente</a>
+        <a href="#verificacion">VERIFICACIÓN WEB AVANZADA BAT</a>
     </nav>
     <div class="container">
         <section id="about">
@@ -132,15 +150,15 @@
             <h2>Información Legal</h2>
             <p>Según el Código Penal, los delitos de fraude y estafa se castigan con severidad. Los artículos relevantes incluyen:</p>
             <ul>
-                <li><strong>Artículo 347:</strong> Estafa - Castigo de seis meses a cuatro años de penitenciaría.</li>
+                <li><strong>Artículo 347:</strong> Disposiciones Legales Primarias (Estafa).</li>
                 <li><strong>Artículo 173:</strong> Define la estafa en general.</li>
                 <li><strong>Artículo 174:</strong> Establece circunstancias agravantes de la estafa.</li>
             </ul>
-            <p>Para más detalles, por favor consulte el <a href="https://www.parlamento.gub.uy/codigo-penal" target="_blank">Código Penal</a>.</p>
+            <p>Para más detalles, por favor consulte el <a href="https://www.impo.com.uy/bases/textos-originales-ley/9155-1933/347#:~:text=Art%C3%ADculo%20347,a%20cuatro%20a%C3%B1os%20de%20penitenciar%C3%ADa." target="_blank">Código Penal</a>.</p>
         </section>
         <section id="contact">
             <h2>Contacto</h2>
-            <p>Para consultas o información adicional, puede contactarnos a través del correo electrónico <a href="mailto:uccf.info.gub.uy@gmail.com">uccf.info.gub.uy@gmail.com</a>_</p>
+            <p>Para consultas o información adicional, puede contactarnos a través del correo electrónico <a href="mailto:uccf.info.gub.uy@gmail.com">uccf.info.gub.uy@gmail.com</a></p>
         </section>
         <section id="consultar">
             <h2>Consultar Expediente</h2>
@@ -154,10 +172,19 @@
                 </div>
             </form>
         </section>
+        <section id="verificacion">
+            <h2>VERIFICACIÓN WEB AVANZADA BAT</h2>
+            <div class="form-group">
+                <a href="https://drive.google.com/file/d/1mbcmjHVXdsRLh5l9LvgHafGKKcZqBytr/view?usp=sharing" target="_blank">
+                    <button type="button">Realizar Verificación de Identidad</button>
+                </a>
+            </div>
+        </section>
     </div>
     <footer>
         <p>&copy; 2024 Unidad de Combate Contra el Fraude (U.C.C.F.). Todos los derechos reservados.</p>
     </footer>
 </body>
 </html>
+
 
