@@ -25,7 +25,7 @@
             position: absolute;
             top: 20px;
             left: 20px;
-            width: 100px;
+            width: 150px;
         }
         nav {
             display: flex;
@@ -38,6 +38,7 @@
             padding: 14px 20px;
             text-decoration: none;
             text-align: center;
+            cursor: pointer;
         }
         nav a:hover {
             background-color: #a11f10;
@@ -49,35 +50,35 @@
             margin: auto;
             width: 100%;
             box-sizing: border-box;
+            display: none;
         }
-        .form-group {
-            margin-bottom: 15px;
-        }
-        .form-group label {
+        .active {
             display: block;
-            margin-bottom: 5px;
         }
-        .form-group input, .form-group textarea {
+        .slideshow-container {
+            position: relative;
+            max-width: 100%;
+            margin: auto;
+        }
+        .slides {
+            display: none;
             width: 100%;
-            padding: 10px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-            box-sizing: border-box;
+            height: 600px;
+            object-fit: cover;
         }
-        .form-group textarea {
-            resize: vertical;
-            height: 150px;
+        .fade {
+            -webkit-animation-name: fade;
+            -webkit-animation-duration: 5s;
+            animation-name: fade;
+            animation-duration: 5s;
         }
-        .form-group button {
-            background-color: #b52414;
-            color: white;
-            padding: 10px 20px;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
+        @-webkit-keyframes fade {
+            from {opacity: .4} 
+            to {opacity: 1}
         }
-        .form-group button:hover {
-            background-color: #a11f10;
+        @keyframes fade {
+            from {opacity: .4} 
+            to {opacity: 1}
         }
         footer {
             background-color: #b52414;
@@ -91,7 +92,7 @@
         }
         @media (max-width: 768px) {
             header img {
-                width: 50px;
+                width: 100px;
                 top: 10px;
                 left: 10px;
             }
@@ -110,27 +111,56 @@
         <img src="https://i.imgur.com/Zsnm0oZ.png" alt="U.C.C.F. Logo">
     </header>
     <nav>
-        <a href="#info">Información</a>
-        <a href="#documents">Libros y Documentos de Interés</a>
+        <a onclick="showSection('info')">Información</a>
+        <a onclick="showSection('documents')">Libros y Documentos de Interés</a>
     </nav>
-    <div class="container">
-        <section id="info">
+    <div class="slideshow-container">
+        <img class="slides fade" src="https://i.imgur.com/VZVCytL.jpg" alt="Imagen 1">
+        <img class="slides fade" src="https://i.imgur.com/Be8jUGX.jpg" alt="Imagen 2">
+        <img class="slides fade" src="https://i.imgur.com/fG89y3o.jpg" alt="Imagen 3">
+        <img class="slides fade" src="https://i.imgur.com/TM87RVe.jpg" alt="Imagen 4">
+    </div>
+    <div id="info" class="container">
+        <section>
             <h2>Información</h2>
             <p>La Unidad Central de Contralor y Fiscalización (U.C.C.F.) se dedica a la corroboración y puesta en disposición de archivos útiles para los lectores del blog <a href="https://nihil-vana.blogspot.com" target="_blank">Nihil Vana</a>.</p>
         </section>
-        <section id="documents">
+    </div>
+    <div id="documents" class="container">
+        <section>
             <h2>Libros y Documentos de Interés</h2>
             <ul>
-                <li><a href="https://terabox.com/your-link-to-pdf1" target="_blank">Libro de Interés 1</a></li>
-                <li><a href="https://terabox.com/your-link-to-pdf2" target="_blank">Documento de Interés 2</a></li>
-                <li><a href="https://terabox.com/your-link-to-pdf3" target="_blank">Guía de Prevención de Fraudes</a></li>
+                <li><a href="#" target="_blank">Libro de Interés 1</a></li>
+                <li><a href="#" target="_blank">Documento de Interés 2</a></li>
+                <li><a href="#" target="_blank">Guía de Prevención de Fraudes</a></li>
             </ul>
         </section>
     </div>
     <footer>
         <p>&copy; 2024 Unidad Central de Contralor y Fiscalización (U.C.C.F.). Todos los derechos reservados.</p>
     </footer>
+    <script>
+        let slideIndex = 0;
+        showSlides();
+        
+        function showSlides() {
+            let slides = document.getElementsByClassName("slides");
+            for (let i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";  
+            }
+            slideIndex++;
+            if (slideIndex > slides.length) {slideIndex = 1}    
+            slides[slideIndex-1].style.display = "block";  
+            setTimeout(showSlides, 5000); // Cambia la imagen cada 5 segundos
+        }
+
+        function showSection(sectionId) {
+            let sections = document.getElementsByClassName("container");
+            for (let i = 0; i < sections.length; i++) {
+                sections[i].classList.remove("active");
+            }
+            document.getElementById(sectionId).classList.add("active");
+        }
+    </script>
 </body>
 </html>
-
-
