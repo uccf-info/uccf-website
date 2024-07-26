@@ -23,7 +23,7 @@
         }
         header img {
             position: absolute;
-            top: 20px;
+            top: 10px; /* Mueve el logo más arriba */
             left: 20px;
             width: 150px;
         }
@@ -32,6 +32,7 @@
             justify-content: center;
             background-color: #b52414;
             flex-wrap: wrap;
+            padding: 10px 0;
         }
         nav a {
             color: white;
@@ -39,9 +40,14 @@
             text-decoration: none;
             text-align: center;
             cursor: pointer;
+            margin: 5px;
+            border: 2px solid white;
+            border-radius: 5px;
+            transition: background-color 0.3s, color 0.3s;
         }
         nav a:hover {
             background-color: #a11f10;
+            color: #fff;
         }
         .container {
             flex: 1;
@@ -51,8 +57,12 @@
             width: 100%;
             box-sizing: border-box;
             display: none;
+            background-color: #ffffff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            margin-top: 20px;
         }
-        .active {
+        .container.active {
             display: block;
         }
         .slideshow-container {
@@ -82,6 +92,34 @@
             from {opacity: .4} 
             to {opacity: 1}
         }
+        section {
+            margin-bottom: 20px;
+        }
+        section h2 {
+            color: #b52414;
+            margin-bottom: 10px;
+        }
+        section p, section ul {
+            font-size: 1.1em;
+            line-height: 1.6;
+        }
+        section ul {
+            list-style: none;
+            padding: 0;
+        }
+        section ul li {
+            margin-bottom: 10px;
+        }
+        section ul li a {
+            color: #b52414;
+            text-decoration: none;
+            border-bottom: 1px solid #b52414;
+            transition: color 0.3s, border-bottom 0.3s;
+        }
+        section ul li a:hover {
+            color: #a11f10;
+            border-bottom: 1px solid #a11f10;
+        }
         footer {
             background-color: #b52414;
             color: white;
@@ -95,7 +133,7 @@
         @media (max-width: 768px) {
             header img {
                 width: 100px;
-                top: 10px;
+                top: 5px; /* Ajusta el logo más arriba para dispositivos móviles */
                 left: 10px;
             }
             nav a {
@@ -178,4 +216,3 @@
     </script>
 </body>
 </html>
-
