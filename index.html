@@ -65,6 +65,11 @@
         .container.active {
             display: block;
         }
+        .container.certificates {
+            background-color: #222; /* Color de fondo oscuro */
+            color: #e0e0e0; /* Texto claro */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra más marcada */
+        }
         .slideshow-container {
             position: relative;
             max-width: 100%;
@@ -153,6 +158,7 @@
     <nav>
         <a href="#info" onclick="showSection('info')">Información</a>
         <a href="#documents" onclick="showSection('documents')">Libros y Documentos de Interés</a>
+        <a href="#certificates" onclick="showSection('certificates')">CERTIFICADOS - Documentos Controlados por la U.C.C.F.</a>
     </nav>
     <div class="slideshow-container">
         <img class="slides fade" src="https://i.imgur.com/VZVCytL.jpg" alt="Imagen 1">
@@ -171,7 +177,19 @@
             <h2>Documentos de Interés</h2>
             <ul>
                 <li><a href="https://mega.nz/file/rV0iXT6A#kc0S6zitedKRvfbLVYoCSIinr8FDonpyNsW_Y66WOoI" target="_blank">Rectoría Legal</a></li>
-<li><a href="https://drive.google.com/file/d/1DhyJ8k-b9OARlJYOpCDX4gW8lGBhnMEl/view?usp=drive_link" target="_blank">APINUV2535SXXI2501 VERSIÓN PUBLICABLE</a></li>
+                <li><a href="https://drive.google.com/file/d/1DhyJ8k-b9OARlJYOpCDX4gW8lGBhnMEl/view?usp=drive_link" target="_blank">APINUV2535SXXI2501 VERSIÓN PUBLICABLE</a></li>
+            </ul>
+        </section>
+    </div>
+    <div id="certificates" class="container certificates">
+        <section>
+            <h2>CERTIFICADOS - Documentos Controlados por la U.C.C.F.</h2>
+            <p>La U.C.C.F. ofrece un servicio de emisión de certificados y validación de documentos que garantiza el cumplimiento de los estándares más altos de control y verificación. A continuación, se detallan los documentos certificados:</p>
+            <ul>
+                <li><a href="#">Certificado de Integridad Documental 2024</a></li>
+                <li><a href="#">Normativa de Fiscalización de Archivos - Edición 2024</a></li>
+                <li><a href="#">Documentos Controlados y Verificados por la U.C.C.F. - Junio 2024</a></li>
+                <li><a href="https://drive.google.com/file/d/1iW4OI03Oe9w0cM22EtplStuYILwezFRz/view?usp=sharing" target="_blank">APINUV2535SXXI2501 - Versión Certificada</a></li>
             </ul>
         </section>
     </div>
@@ -194,24 +212,12 @@
         }
 
         function showSection(sectionId) {
-            let sections = document.getElementsByClassName("container");
-            for (let i = 0; i < sections.length; i++) {
-                sections[i].classList.remove("active");
-            }
-            document.getElementById(sectionId).classList.add("active");
-        }
-
-        document.querySelectorAll('nav a').forEach(anchor => {
-            anchor.addEventListener('click', function(e) {
-                e.preventDefault();
-                const targetId = this.getAttribute('href').substring(1);
-                showSection(targetId);
-                window.scrollTo({
-                    top: document.getElementById(targetId).offsetTop,
-                    behavior: 'smooth'
-                });
+            const sections = document.querySelectorAll('.container');
+            sections.forEach(section => {
+                section.classList.remove('active');
             });
-        });
+            document.getElementById(sectionId).classList.add('active');
+        }
     </script>
 </body>
 </html>
